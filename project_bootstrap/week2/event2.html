@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--h1 id="'h1" onmousedown="abc(this)" onmouseup="abc1(this)"> Welcome</!--h1>
+
+    <script>
+        function abc(kuchbhi){
+            kuchbhi.style.color="red"
+            kuchbhi.innerText='tata'
+
+        }
+
+        function abc1(obj){
+            obj.innerText='welcome'
+            obj.style.color="black"
+
+        }
+    </script -->
+
+    <h1 id="h1"> running</h1>
+    <script>
+        let i=0;
+        setInterval(display,1000);
+        function display(){
+            let d=new Date();
+            document.getElementById('h1').innerText=
+            d.getHours() + " : " + d.getMinutes() + " : "+d.getSeconds()
+        }
+    </script>
+</body>
+</html>
