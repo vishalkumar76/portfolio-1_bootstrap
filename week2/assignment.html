@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function agree(){
+        window.alert("agree")
+
+        let name=document.getElementById('t1').value;
+        let age=document.getElementById('a1').value;
+        let ans=eval(age);
+        document.getElementById('p').innerHTML = "Welcome Mr./Ms/ "+ name + " you are " + age+" yearold ";
+
+
+    }
+
+    function disagree(){
+
+        let n=document.getElementsByTagName('input');
+        console.log(n[0].value);
+        console.log(n[1].value);
+        document.getElementById('p').innerHTML = "put correct value";
+
+    }
+</script>
+</head>
+<body>
+    <div class="heading">
+        <h1 style="text-align: center; background-color: rgb(101, 217, 247);">welcome</h1>
+    </div>
+
+    <div class="container" style=" text-align: center; background-color: rgb(240, 104, 104);">
+        <label for="NAME " style="color: aqua;">Name:</label><br>
+        <input type="text" placeholder="name"  id="t1" style="border: 3px solid black; height: 25px; background-color: rgb(233, 214, 250);"><br>
+        <label for="age" >Age:</label><br>
+        <input type="text" placeholder="age" id="a1" style="border:3px solid black;"><br>
+        <button  style="margin-top: 20px; border: 2px solid black; background-color: rgb(31, 139, 139);" onclick="agree()" >agree</button>
+        <button onclick="disagree()" style="border:2px solid black;background-color: rgb(90, 253, 139);">disagree</button>
+    </div>
+
+    <div class="write" style="text-align: center; font-weight: 30px; background-color: aqua;">
+
+        <p id="p"></p>
+
+
+
+    </div>
+
+    
+</body>
+</html>

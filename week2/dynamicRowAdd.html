@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Rows</title>
+    
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    
+    <style>
+      .container {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2 class="text-center bg-success">Achievements</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <strong>S.No</strong>
+        </div>
+        <div class="col">
+          <strong>Achievement</strong>
+        </div>
+        <div class="col">
+          <strong>Year</strong>
+        </div>
+        <div class="col">
+          <strong>field</strong>
+        </div>
+      </div>
+      <div id="dynamic-rows">
+        
+      </div>
+    </div>
+
+    <div class="container mt-7">
+      <button class="btn btn-primary" onclick="addRow()">Add New Row</button>
+    </div>
+
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+      let counter = 0;
+
+      function addRow() {
+        counter++;
+
+        
+        let newRow = document.createElement("div");
+        newRow.className = "row";
+        newRow.innerHTML = `
+        <div class="col">${counter}</div>
+        <div class="col"><input type="text" class="form-control" name="name${counter}"></div>
+        <div class="col"><input type="text" class="form-control" name="year${counter}"></div>
+        <div class="col"><input type="text" class="form-control" name="field${counter}"></div>
+      `;
+
+        
+        document.getElementById("dynamic-rows").appendChild(newRow);
+      }
+    </script>
+  </body>
+</html>
